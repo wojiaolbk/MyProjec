@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //// TODO: 2017/7/20 0020 heheheh
         initPer();
         mGridView = (NoScrollGridView) findViewById(R.id.gridView);
         mNames = new ArrayList<>();
