@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.nestword.CountActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:focusable="false"
+            android:hint="请输入:"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:id="@+id/result"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_content"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:textColor="#ff00aa"
+            android:text="结果："/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/one_pai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:onClick="one"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="1"/>
+
+            <Button
+                android:onClick="two"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="2"/>
+
+            <Button
+                android:onClick="three"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="3"/>
+
+            <Button
+
+                android:onClick="jia"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="加"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/two_pai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/one_pai"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:onClick="four"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="4"/>
+
+            <Button
+                android:onClick="five"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="5"/>
+
+            <Button
+                android:onClick="six"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="6"/>
+
+            <Button
+                android:onClick="jian"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="剪"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/three_pai"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/two_pai"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:onClick="seven"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="7"/>
+
+            <Button
+                android:onClick="eight"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="8"/>
+
+            <Button
+                android:onClick="nine"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="9"/>
+
+            <Button
+                android:onClick="cheng"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="乘"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/four_pai"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/three_pai"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:onClick="zero"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="0"/>
+
+            <Button
+                android:onClick="point"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="."/>
+
+            <Button
+                android:onClick="clear"
+                android:layout_width="80dp"
+
+                android:layout_height="80dp"
+                android:text="清除"/>
+
+            <Button
+                android:onClick="euqel"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:text="="/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
