@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO: 2017/7/20 0020 heheheh
         // TODO: what are you doing now ? wastring your life?
 
+
         initPer();
         mGridView = (NoScrollGridView) findViewById(R.id.gridView);
         mNames = new ArrayList<>();
