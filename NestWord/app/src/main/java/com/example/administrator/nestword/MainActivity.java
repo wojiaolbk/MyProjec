@@ -3,6 +3,7 @@ package com.example.administrator.nestword;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -34,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO: 2017/7/20 0020 heheheh
         // TODO: what are you doing now ? wastring your life?
-
-
         initPer();
         mGridView = (NoScrollGridView) findViewById(R.id.gridView);
         mNames = new ArrayList<>();
@@ -55,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initPer() {
         List<PermissionItem> permissionItems = new ArrayList<PermissionItem>();
-        permissionItems.add(new PermissionItem(Manifest.permission.USE_FINGERPRINT, "USE_FINGERPRINT", R.drawable.permission_ic_location));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            permissionItems.add(new PermissionItem(Manifest.permission.USE_FINGERPRINT, "USE_FINGERPRINT", R.drawable.permission_ic_location));
+        }
         permissionItems.add(new PermissionItem(Manifest.permission.ACCESS_COARSE_LOCATION, "USE_FINGERPRINT", R.drawable.permission_ic_location));
         permissionItems.add(new PermissionItem(Manifest.permission.ACCESS_FINE_LOCATION, "USE_FINGERPRINT", R.drawable.permission_ic_location));
         permissionItems.add(new PermissionItem(Manifest.permission.ACCESS_NETWORK_STATE, "USE_FINGERPRINT", R.drawable.permission_ic_location));
