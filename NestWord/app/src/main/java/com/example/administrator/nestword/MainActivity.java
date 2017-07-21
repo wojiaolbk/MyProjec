@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //TODO: 2017/7/20 0020 heheheh
         // TODO: what are you doing now ? wastring your life?
+        // TODO: 2017/7/21 0021 我困死了！ 
         initPer();
         mGridView = (NoScrollGridView) findViewById(R.id.gridView);
         mNames = new ArrayList<>();
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onDeny(String permission, int position) {
+
+                        // TODO: what do you want to do ? do you wany a cup of tea ?
 
                     }
 

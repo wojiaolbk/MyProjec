@@ -55,9 +55,9 @@ public class WeatherActivity extends AppCompatActivity {
             super.handleMessage(msg);
             mView.stopNestedScroll();
             mView.reset();
+            // TODO: 2017/7/20 0020 heheaasskhl
             ScaleAnimation scaleAnimation = new ScaleAnimation(1, 0f, 1, 0f,
                     Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
-
             scaleAnimation.setDuration(500);
             scaleAnimation.setFillAfter(true);
             mRl_loading.startAnimation(scaleAnimation);
@@ -169,6 +169,7 @@ public class WeatherActivity extends AppCompatActivity {
             mFeng_dengji.setText(s2);
             mPm.setText(weathBean.getResult().getPm25().getPm25().getDes());
             setAdapter(weather);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -222,6 +223,7 @@ public class WeatherActivity extends AppCompatActivity {
             holder.item_wendu.setText(weather.get(position).getInfo().getNight().get(2) + "/" + weather.get(position).getInfo().getDay().get(2));
             return convertView;
         }
+
 
         class Holder {
             TextView item_day;
