@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta charset="utf-8" />
+		<title>hello</title>
+	</head>
+	<!-- ZUI 标准版压缩后的 CSS 文件 -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/css/zui.min.css">
+
+	<!-- ZUI Javascript 依赖 jQuery -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/lib/jquery/jquery.js"></script>
+	<!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/js/zui.min.js"></script>
+	<script src="js/common.js"></script>
+	<script>
+		document.write("<h1>this is a part</h1>")
+		document.write("<p>this is a doc</p>")
+		var person = {
+			firstname: "asd",
+			lasename: "hehe"
+		}
+		document.write(person.lasename)
+		common.showDate()
+	</script>
+
+	<body>
+
+		<p id="demo">显示日期</p>
+		<button type="button" onclick="showDate()">click<br /></button>
+		<p>点击变换图片</p>
+		<img id="img" src="img/b.png" onclick="changeImg()" width="100" height="auto" />
+		<p id="number">判断是否是数字</p>
+
+		<input type="text" name="jiancha" id="input" />
+		<button type="button" onclick="checkX()">Check</button>
+
+		<div class="input-control has-icon-left">
+			<input id="inputAccountExample1" type="text" class="form-control" placeholder="用户名">
+			<label for="inputAccountExample1" class="input-control-icon-left"><i class="icon icon-user "></i></label>
+		</div>
+
+		<div class="input-control has-icon-left has-icon-right">
+			<input id="inputEmailExample1" type="email" class="form-control" placeholder="密码">
+			<label for="inputEmailExample1" class="input-control-icon-left"><i class="icon icon-envelope "></i></label>
+			<label for="inputEmailExample1" class="input-control-icon-right"><i class="icon icon-check"></i></label>
+		</div>
+
+		//搜索
+		<div class="input-group">
+			<div class="input-control search-box search-box-circle has-icon-left has-icon-right search-example" id="searchboxExample">
+				<input id="inputSearchExample3" type="search" class="form-control search-input" placeholder="搜索">
+				<label for="inputSearchExample3" class="input-control-icon-left search-icon"><i class="icon icon-search"></i></label>
+			</div>
+
+			<span class="input-group-btn">
+   			 <button class="btn btn-primary" type="button">搜索</button>
+  			</span>
+		</div>
+	</body>
+
+</html>

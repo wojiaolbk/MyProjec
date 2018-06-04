@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>test</title>
+		<meta name="abstract" content="" charset="utf-8" />
+		<link rel="stylesheet" href="css/zui.min.css" />
+		<script src="//cdn.bootcss.com/zui/1.8.1/lib/jquery/jquery.js"></script>
+		<script src="//cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+		<style type="text/css">
+			body {
+				text-align: center;
+				background-color: pink;
+			}
+			
+			h2 {
+				font-size: 20px;
+				color: #0000FF;
+				font-family: arial;
+			}
+			/*id以#号开头*/
+			
+			#demo {
+				color: yellow;
+			}
+			/*class以.开头*/
+			
+			.center {
+				text-align: left;
+			}
+			
+			p {
+				color: pink;
+			}
+			.btn-lg{
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h2 uni>为 JSON 字符串创建对象</h2>
+		<p id="demo">aaa</p>
+
+		<h4 class="center">我是四级标题</h4>
+		<h5 class="center">我是5级标题</h5>
+		<audio src="music/119.wav" controls="controls"></audio>
+		<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#myModal">启动对话框</button>
+		<div class="modal modal-for-page fade" id="myModal" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog" style="margin-top: 229.667px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+						<h4 class="modal-title">对话框标题</h4>
+					</div>
+					<div class="modal-body">
+						<h4>虞美人·春花秋月何时了<br /> <small>五代·李煜</small></h4>
+						<p>春花秋月何时了？往事知多少。小楼昨夜又东风，故国不堪回首月明中。<br>雕栏玉砌应犹在，只是朱颜改。问君能有几多愁？恰似一江春水向东流</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-primary">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		var text = '{ "sites" : [' +
+			'{ "name":"Runoob" , "url":"www.runoob.com" },' +
+			'{ "name":"Google" , "url":"www.google.com" },' +
+			'{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+
+		obj = JSON.parse(text);
+		document.getElementById("demo").innerHTML = obj.sites[1].name + " " + obj.sites[1].url;
+	</script>
+
+</html>
